@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #344e41;
+}
+.heading{
+    justify-content: center;
+}
+div.main{
+    width: 100%;
+    margin: 30px auto 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+.width-holder{
+    width:50%;
+}
+.radio-btn{
+    display: flex;
+    justify-content: space-evenly;
+}
+.button-padding {
+    margin-right: 1rem;
+}
+h2{
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    color: #dad7cd;
+}
+div.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 18px;
+    color: #3a5a40;
+    
+}
+.wrapper{
+    width: 37.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dad7cd;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 20px 20px;
+    
+}
+label{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-style: italic;
+}
+.form-area{
+    display: flex;
+    justify-content: center;
+}
+.submit{
+    width: 200px;
+    padding: 7px;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #344e41;
+    color: #dad7cd;
+    cursor: pointer;
+    border: 1px solid #344e41;
+    transition: ease 0.3s;
+}
+.submit:hover{
+    background-color: #588157;
+}
+.button-div {
+    display: flex;
+    justify-content: end;
+}
+.form-element {
+    padding:1rem;
+    padding-left:0;
+}
+.description{
+    font-family: sans-serif;
+}
+div.radio-label{
+    border: 1px solid #344e41;
+    border-radius: 8px;
+    margin: 5px 5px 2px 2px;
+    padding: 5px 5px 5px 5px;
+}
+.heading-result{
+    display: flex;
+    justify-content: center;
+    color: #dad7cd;
+}
+.result-main{
+    margin: 5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #3a5a40;
+}
+.result-container{
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #dad7cd;
+    background-color: #dad7cd;
+}
+.category{
+    padding: 1rem;
+    font-style: italic;
+    font-weight: bold;
+}
+.image-box{
+    padding: 1rem;
+}
+.percent-value{
+    padding: 1rem;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data</title>
+</head>
+<body>
+    <div class="result-main">
+    <h1 class="heading-result">Your Result</h1>
+    <div class="result-container">
+
+        <div class="score-percent">
+            {{ score }}
+        </div>
+
+        <div class="category">
+            {% if data == 'bad' %}
+                <p>Damn! I'm out of words.</p>
+                <div class="image-box">
+                    <img src="/static/i-suck-flaws.gif">
+                </div>
+
+            {% elif data == 'alright' %}
+                <p>Go to the gym and read some books</p>
+                <div class="image-box">
+                    <img src="/static/uncomfortable-pierce-hawthorne.gif">
+                </div>
+
+            {% elif data == 'good' %}
+                <p>Do you even want to make friends?</p>
+                <div class="image-box">
+                    <img src="/static/britta-perry-peyote.gif">
+                </div>
+
+            {% elif data == 'better' %}
+                <p>Are you satisfied with yourself?</p>
+                <div class="image-box">
+                    <img src="/static/community-thumbs-up.gif">
+                </div>
+
+            {% elif data == 'best' %}
+                <p>You must be the popular kid in school!</p>
+                <div class="image-box">
+                    <img src="/static/coolest-guy-cool-guy.gif">
+                </div>
+
+            {% else %}
+                <p>Unknown result.</p>
+
+            {% endif %}
+        </div>
+
+        <div class="percent-value">
+            {{ people_percent }}
+        </div>
+        <p><b>Disclaimer:</b></p>
+        <p>This result is an amalgamation of different views of people who took the survey. 
+            If your score is low, don't fret. It's either you are hated by everyone or the people who took the survey are all wrong. 
+            There is a high change of error in my model too.</p>
+        <a href="/">back to home</a>
+    </div>
+
+    
+</div>
+</body>
+</html>

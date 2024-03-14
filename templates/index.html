@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <h2 class="heading">Fill up all your data</h2>
+        <div class="container">
+            <div class="wrapper">
+                <form id="myForm" action="{{ url_for('predict')}}" class="form-area" id="formid" method="post">
+                    <div class="form-group">
+                        <div class="form-element">
+                            <label for="age">Your Age</label><br>
+                            <input type="number" id="age" name="age" class="width-holder" required="required"
+                                placeholder="Enter Your Age">
+                            <br>
+                        </div>
+                        <div class="form-element">
+                            <label for="gender">Your Gender</label><br>
+                            <select id="gender" name="gender" required="required" class="width-holder"
+                                placeholder="your gender">
+                                <option value="" disabled selected hidden>Select your gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-element">
+                            <label for="sexuality">Your sexuality</label><br>
+                            <select id="sexuality" name="sexuality" class="width-holder" required="required">
+                                <option value="" disabled selected hidden>Select your sexuality</option>
+                                <option value="heterosexual">Heterosexual</option>
+                                <option value="homosexual">Homosexual</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-element">
+                            <label for="lang">Your Mother Tongue</label><br>
+                            <select id="lang" name="lang" class="width-holder" required="required">
+                                <option value="" disabled selected hidden>Select your mother tongue</option>
+                                <option value="tamil">Tamil</option>
+                                <option value="kannada">Kannada</option>
+                                <option value="malayalam">Malayalam</option>
+                                <option value="Telugu">Telugu</option>
+                                <option value="hindi">Hindi</option>
+                            </select><br>
+                        </div>
+                        <h3 class="description">Give a rating between 1 to 5 depending on your following qualities.</h3><br>
+
+                        <div class="radio-label">
+                                <label for="finance">Rate your Financial Status:</label><br>
+                                <div class="radio-btn">
+
+                                <div><input type="radio" name="finance" value="1" class="button-padding"
+                                        required="required">1</div>
+
+                                <div><input type="radio" name="finance" value="2" class="button-padding"
+                                        required="required">2</div>
+
+                                <div><input type="radio" name="finance" value="3" class="button-padding"
+                                        required="required">3</div>
+
+                                <div><input type="radio" name="finance" value="4" class="button-padding"
+                                        required="required">4</div>
+
+                                <div><input type="radio" name="finance" value="5" class="button-padding"
+                                        required="required">5</div>
+                                </div>
+                        </div>
+                        <br>
+
+                        <div class="radio-label">
+                                <label for="communication">Rate your Communication Skills:</label><br>
+                                <div class="radio-btn">
+                                <div><input type="radio" name="communication" value="1" class="button-padding"
+                                        required="required">1</div>
+
+                                <div><input type="radio" name="communication" value="2" class="button-padding"
+                                        required="required">2</div>
+
+                                <div><input type="radio" name="communication" value="3" class="button-padding"
+                                        required="required">3</div>
+
+                                <div><input type="radio" name="communication" value="4" class="button-padding"
+                                        required="required">4</div>
+
+                                <div><input type="radio" name="communication" value="5" class="button-padding"
+                                        required="required">5</div>
+                                </div>
+                        </div>
+                        <br>
+
+                        <div class="radio-label">
+                                <label for="emoint">Rate your Emotional Intelligence:</label><br>
+                                <div class="radio-btn">
+                                <div><input type="radio" name="emoint" value="1" class="button-padding"
+                                        required="required">1</div>
+
+                                <div><input type="radio" name="emoint" value="2" class="button-padding"
+                                        required="required">2</div>
+
+                                <div><input type="radio" name="emoint" value="3" class="button-padding"
+                                        required="required">3</div>
+
+                                <div><input type="radio" name="emoint" value="4" class="button-padding"
+                                        required="required">4</div>
+
+                                <div><input type="radio" name="emoint" value="5" class="button-padding"
+                                        required="required">5</div>
+                                </div>
+                        </div>
+                        <br>
+
+                        <div class="radio-label">
+                                <label for="listeningSkills">Rate your Listening Skills:</label><br>
+                                <div class="radio-btn">
+                                <div><input type="radio" name="listeningSkills" value="1" class="button-padding"
+                                        required="required">1</div>
+
+                                <div><input type="radio" name="listeningSkills" value="2" class="button-padding"
+                                        required="required">2</div>
+
+                                <div><input type="radio" name="listeningSkills" value="3" class="button-padding"
+                                        required="required">3</div>
+
+                                <div><input type="radio" name="listeningSkills" value="4" class="button-padding"
+                                        required="required">4</div>
+
+                                <div><input type="radio" name="listeningSkills" value="5" class="button-padding"
+                                        required="required">5</div>
+                                </div>
+                        </div>
+                        <br>
+
+                        <div class="radio-label">
+                                <label for="looks">Rate your Looks:</label><br>
+                                <div class="radio-btn">
+                                <div><input type="radio" name="looks" value="1" class="button-padding" required="required">1
+                                </div>
+
+                                <div><input type="radio" name="looks" value="2" class="button-padding" required="required">2
+                                </div>
+
+                                <div><input type="radio" name="looks" value="3" class="button-padding" required="required">3
+                                </div>
+
+                                <div><input type="radio" name="looks" value="4" class="button-padding" required="required">4
+                                </div>
+
+                                <div><input type="radio" name="looks" value="5" class="button-padding" required="required">5
+                                </div>
+                                </div>
+                        </div>
+                        <br>
+
+                        <div class="radio-label">
+                                <label for="fashionSense">Rate Your Fashion Sense:</label><br>
+                                <div class="radio-btn">
+                                <div><input type="radio" name="fashionSense" value="1" class="button-padding"
+                                        required="required">1</div>
+
+                                <div><input type="radio" name="fashionSense" value="2" class="button-padding"
+                                        required="required">2</div>
+
+                                <div><input type="radio" name="fashionSense" value="3" class="button-padding"
+                                        required="required">3</div>
+
+                                <div><input type="radio" name="fashionSense" value="4" class="button-padding"
+                                        required="required">4</div>
+
+                                <div><input type="radio" name="fashionSense" value="5" class="button-padding"
+                                        required="required">5</div>
+                                </div>
+                        </div>
+                        <br>
+
+                        <div class="radio-label">
+                                <label for="fitness">Rate your Fitness:</label><br>
+                                <div class="radio-btn">
+                                <div><input type="radio" name="fitness" value="1" class="button-padding"
+                                        required="required">1</div>
+
+                                <div><input type="radio" name="fitness" value="2" class="button-padding"
+                                        required="required">2</div>
+
+                                <div><input type="radio" name="fitness" value="3" class="button-padding"
+                                        required="required">3</div>
+
+                                <div><input type="radio" name="fitness" value="4" class="button-padding"
+                                        required="required">4</div>
+
+                                <div><input type="radio" name="fitness" value="5" class="button-padding"
+                                        required="required">5</div>
+                                </div>
+                        </div>
+                        <br>
+
+                        <div class="radio-label">
+                        <label for="confidence">Rate your Confidence:</label><br>
+                        <div class="radio-btn">
+                            <div><input type="radio" name="confidence" value="1" class="button-padding"
+                                    required="required">1</div>
+
+                            <div><input type="radio" name="confidence" value="2" class="button-padding"
+                                    required="required">2</div>
+
+                            <div><input type="radio" name="confidence" value="3" class="button-padding"
+                                    required="required">3</div>
+
+                            <div><input type="radio" name="confidence" value="4" class="button-padding"
+                                    required="required">4</div>
+
+                            <div><input type="radio" name="confidence" value="5" class="button-padding"
+                                    required="required">5</div>
+                        </div></div>
+                        <br>
+
+                        <div class="radio-label">
+                        <label for="senseOfHumor">Rate your Sense of Humor:</label><br>
+                        <div class="radio-btn">
+                            <div><input type="radio" name="senseOfHumor" value="1" class="button-padding"
+                                    required="required">1</div>
+
+                            <div><input type="radio" name="senseOfHumor" value="2" class="button-padding"
+                                    required="required">2</div>
+
+                            <div><input type="radio" name="senseOfHumor" value="3" class="button-padding"
+                                    required="required">3</div>
+
+                            <div><input type="radio" name="senseOfHumor" value="4" class="button-padding"
+                                    required="required">4</div>
+
+                            <div><input type="radio" name="senseOfHumor" value="5" class="button-padding"
+                                    required="required">5</div>
+                        </div></div>
+                        <br>
+
+                        <div class="radio-label">
+                        <label for="kindness">Rate your Kindness:</label><br>
+                        <div class="radio-btn">
+                            <div><input type="radio" name="kindness" value="1" class="button-padding"
+                                    required="required">1</div>
+
+                            <div><input type="radio" name="kindness" value="2" class="button-padding"
+                                    required="required">2</div>
+
+                            <div><input type="radio" name="kindness" value="3" class="button-padding"
+                                    required="required">3</div>
+
+                            <div><input type="radio" name="kindness" value="4" class="button-padding"
+                                    required="required">4</div>
+
+                            <div><input type="radio" name="kindness" value="5" class="button-padding"
+                                    required="required">5</div>
+                        </div></div>
+                        <br>
+
+                        <div class="radio-label">
+                        <label for="openMindedness">Rate your Open-mindedness:</label><br>
+                        <div class="radio-btn">
+                            <div><input type="radio" name="openMindedness" value="1" class="button-padding"
+                                    required="required">1</div>
+
+                            <div><input type="radio" name="openMindedness" value="2" class="button-padding"
+                                    required="required">2</div>
+
+                            <div><input type="radio" name="openMindedness" value="3" class="button-padding"
+                                    required="required">3</div>
+
+                            <div><input type="radio" name="openMindedness" value="4" class="button-padding"
+                                    required="required">4</div>
+
+                            <div><input type="radio" name="openMindedness" value="5" class="button-padding"
+                                    required="required">5</div>
+                        </div></div>
+                        <br>
+
+                        <div class="radio-label">
+                        <label for="loyalty">Rate your Loyalty:</label><br>
+                        <div class="radio-btn">
+                            <div><input type="radio" name="loyalty" value="1" class="button-padding"
+                                    required="required">1</div>
+
+                            <div><input type="radio" name="loyalty" value="2" class="button-padding"
+                                    required="required">2</div>
+
+                            <div><input type="radio" name="loyalty" value="3" class="button-padding"
+                                    required="required">3</div>
+
+                            <div><input type="radio" name="loyalty" value="4" class="button-padding"
+                                    required="required">4</div>
+
+                            <div><input type="radio" name="loyalty" value="5" class="button-padding"
+                                    required="required">5</div>
+                        </div></div>
+                        <br>
+
+                        <div class="radio-label">
+                        <label for="generosity">Rate your Generosity:</label><br>
+                        <div class="radio-btn">
+                            <div><input type="radio" name="generosity" value="1" class="button-padding"
+                                    required="required">1</div>
+
+                            <div><input type="radio" name="generosity" value="2" class="button-padding"
+                                    required="required">2</div>
+
+                            <div><input type="radio" name="generosity" value="3" class="button-padding"
+                                    required="required">3</div>
+
+                            <div><input type="radio" name="generosity" value="4" class="button-padding"
+                                    required="required">4</div>
+
+                            <div><input type="radio" name="generosity" value="5" class="button-padding"
+                                    required="required">5</div>
+                        </div></div>
+                        <br>
+
+                        <div class="radio-label">
+                        <label for="selflessness">Rate your Selflessness:</label><br>
+                        <div class="radio-btn">
+                            <div><input type="radio" name="selflessness" value="1" class="button-padding"
+                                    required="required">1</div>
+
+                            <div><input type="radio" name="selflessness" value="2" class="button-padding"
+                                    required="required">2</div>
+
+                            <div><input type="radio" name="selflessness" value="3" class="button-padding"
+                                    required="required">3</div>
+
+                            <div><input type="radio" name="selflessness" value="4" class="button-padding"
+                                    required="required">4</div>
+
+                            <div><input type="radio" name="selflessness" value="5" class="button-padding"
+                                    required="required">5</div>
+                        </div></div>
+                        <br>
+
+                        <div class="radio-label">
+                        <label for="honesty">Rate your Honesty:</label><br>
+                        <div class="radio-btn">
+                            <div><input type="radio" name="honesty" value="1" class="button-padding"
+                                    required="required">1</div>
+
+                            <div><input type="radio" name="honesty" value="2" class="button-padding"
+                                    required="required">2</div>
+
+                            <div><input type="radio" name="honesty" value="3" class="button-padding"
+                                    required="required">3</div>
+
+                            <div><input type="radio" name="honesty" value="4" class="button-padding"
+                                    required="required">4</div>
+
+                            <div><input type="radio" name="honesty" value="5" class="button-padding"
+                                    required="required">5</div>
+                        </div></div>
+                        <br>
+                        <div class="button-div">
+                            <button type="submit" value="submit"
+                                class="btn btn-primary btn-block btn-large submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
