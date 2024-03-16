@@ -117,6 +117,7 @@ div.radio-label{
     font-weight: bold;
 }
 .image-box{
+    display: flex;
     padding: 1rem;
 }
 .percent-value{
